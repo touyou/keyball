@@ -36,7 +36,7 @@ jobs:
         run: /usr/bin/python3 -m pip install -r __qmk__/requirements.txt
 
       - name: Compile and link
-        run: qmk compile -j 4 -kb keyball/${{ inputs.keyboard }} -km ${{ inputs.keymap }}
+        run: qmk compile -j 4 -kb keyball/${{ inputs.keyboard }} -km ${{ inputs.keymap }} && cwd && ls -l
 
       - name: Archive built firmware
         uses: actions/upload-artifact@v4
@@ -48,4 +48,4 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: ${{ inputs.keyboard }}-${{ inputs.keymap }}-cflags
-          path: __qmk__/.build/**/cflags.txt
+          path: __qmk__/.build/obj_keyball_${{ inputs.keyboard }}_${{ inputs.keymap }}/cflags.txt
