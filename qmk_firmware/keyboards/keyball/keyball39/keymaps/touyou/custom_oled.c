@@ -1,5 +1,7 @@
 #include QMK_KEYBOARD_H
 
+#include "version.h"
+
 // convert number to string
 static const char *itoc(uint8_t number, uint8_t width) {
   static char str[5];
@@ -35,6 +37,16 @@ static void print_cpi_status(void) {
 
 // Default page
 static void render_default(void) { print_cpi_status(); }
+
+// Version page
+static void render_version(void) {
+  oled_write_P(PSTR("Ver.\n\n"), false);
+  oled_write_ln_P(PSTR(QMK_BUILDDATE), false);
+  oled_write_P(PSTR("\n"), false);
+  oled_write_ln_P(PSTR(QMK_KEYMAP), false);
+  oled_write_P(PSTR("\n"), false);
+  oled_write_ln_P(PSTR(QMK_VERSION), false);
+}
 
 // Custom OLED rendering function
 void keyball_oled_render_custom(void) { render_default(); }

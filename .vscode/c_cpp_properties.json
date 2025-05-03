@@ -2,7 +2,7 @@
   "configurations": [
     {
       "name": "Mac",
-      "includePath": ["${default}", "${workspaceFolder}/."],
+      "includePath": ["${default}", "${workspaceFolder}/**"],
       "defines": [
         "LTO_ENABLE",
         "INTERRUPT_CONTROL_ENDPOINT",
