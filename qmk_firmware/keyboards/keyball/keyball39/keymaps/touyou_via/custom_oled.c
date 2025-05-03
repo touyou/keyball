@@ -34,11 +34,7 @@ static void print_cpi_status(void) {
 }
 
 // Default page
-static void render_default(void) {
-  print_cpi_status();
-}
+static void render_default(void) { print_cpi_status(); }
 
 // Custom OLED rendering function
-void keyball_oled_render_custom(void) {
-  render_default();
-}
+void keyball_oled_render_custom(void) { render_default(); }
