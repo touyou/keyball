@@ -1,15 +1,63 @@
 {
-    "configurations": [
-        {
-            "name": "Mac",
-            "includePath": [
-                "${default}"
-            ],
-            "defines": [],
-            "cStandard": "c17",
-            "compilerPath": "/usr/bin/gcc",
-            "cppStandard": "c++23"
-        }
-    ],
-    "version": 4
+  "configurations": [
+    {
+      "name": "Mac",
+      "includePath": ["${default}", "${workspaceFolder}/."],
+      "defines": [
+        "LTO_ENABLE",
+        "INTERRUPT_CONTROL_ENDPOINT",
+        "KEYBOARD_",
+        "KEYBOARD_keyball",
+        "KEYBOARD_keyball_keyball39",
+        "KEYMAP_C=\"keyboards/keyball/keyball39/keymaps/touyou_via/keymap.c\"",
+        "POINTING_DEVICE_ENABLE",
+        "POINTING_DEVICE_DRIVER_custom",
+        "EEPROM_ENABLE",
+        "EEPROM_VENDOR",
+        "RGBLIGHT_ENABLE",
+        "WS2812_DRIVER_BITBANG",
+        "USE_CIE1931_CURVE",
+        "VIA_ENABLE",
+        "BOOTMAGIC_LITE",
+        "SPLIT_KEYBOARD",
+        "SPLIT_COMMON_TRANSACTIONS",
+        "SERIAL_DRIVER_BITBANG",
+        "CRC_ENABLE",
+        "OLED_ENABLE",
+        "OLED_TRANSPORT_I2C",
+        "SEND_STRING_ENABLE",
+        "DYNAMIC_KEYMAP_ENABLE",
+        "TRI_LAYER_ENABLE",
+        "MOUSE_ENABLE",
+        "MOUSE_SHARED_EP",
+        "RAW_ENABLE",
+        "NO_PRINT",
+        "NO_DEBUG",
+        "SHARED_EP_ENABLE",
+        "BOOTLOADER_CATERINA",
+        "BOOTLOADER_SIZE=4096",
+        "F_CPU=16000000UL",
+        "F_USB=16000000UL",
+        "ARCH=ARCH_AVR8",
+        "USB_DEVICE_ONLY",
+        "USE_FLASH_DESCRIPTORS",
+        "USE_STATIC_OPTIONS=\"(USB_DEVICE_OPT_FULLSPEED | USB_OPT_REG_ENABLED | USB_OPT_AUTO_PLL)\"",
+        "FIXED_CONTROL_ENDPOINT_SIZE=8",
+        "FIXED_NUM_CONFIGURATIONS=1",
+        "PROTOCOL_LUFA",
+        "QMK_MCU=\"atmega32u4\"",
+        "QMK_MCU_ATMEGA32U4",
+        "QMK_KEYBOARD=\"keyball/keyball39\"",
+        "QMK_KEYBOARD_H=\".build/obj_keyball_keyball39_touyou_via/src/default_keyboard.h\"",
+        "QMK_KEYMAP=\"touyou_via\"",
+        "QMK_KEYMAP_H=\"touyou_via.h\"",
+        "QMK_KEYMAP_CONFIG_H=\"keyboards/keyball/keyball39/keymaps/touyou_via/config.h\""
+      ],
+      "forcedInclude": [],
+      "cStandard": "c17",
+      "compilerPath": "/usr/bin/gcc",
+      "cppStandard": "c++23"
+    }
+  ],
+  "version": 4
 }
