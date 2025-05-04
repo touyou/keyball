@@ -137,7 +137,7 @@ static const char PROGMEM img_layer_5[] = {
 
 // Layer status
 static void print_layer_status(void) {
-  oled_set_cursor(0, 9);
+  oled_set_cursor(0, 8);
   switch (get_highest_layer(layer_state)) {
   case 1:
     oled_write_raw_P(img_layer_1, sizeof(img_layer_1));
@@ -197,7 +197,7 @@ static const char PROGMEM img_scroll_no[] = {
 
 // Scroll status
 static void print_scroll_status(void) {
-  oled_set_cursor(0, 7);
+  oled_set_cursor(0, 6);
   oled_write_raw_P(keyball.scroll_mode ? img_scroll_up : img_scroll_no,
                    sizeof(img_scroll_no));
   oled_set_cursor(0, 14);
@@ -208,7 +208,7 @@ static void print_scroll_status(void) {
 // Default page
 static void render_default(void) {
   print_cpi_status();
-  print_lock_key_status();
+  // print_lock_key_status();
   print_layer_status();
   print_scroll_status();
 }
@@ -216,7 +216,7 @@ static void render_default(void) {
 // Version page
 static void render_version(void) {
   oled_set_cursor(0, 6);
-  oled_write_P(PSTR("VER.\nTY001\n\nQMK.\n"), false);
+  oled_write_P(PSTR("VER.\nTY002\n\nQMK.\n"), false);
   oled_write_ln_P(PSTR(QMK_VERSION), false);
 }
 
