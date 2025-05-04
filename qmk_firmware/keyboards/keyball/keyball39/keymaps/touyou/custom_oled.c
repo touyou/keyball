@@ -2,8 +2,6 @@
 
 #include "version.h"
 
-// text 5x14
-
 // convert number to string
 static const char *itoc(uint8_t number, uint8_t width) {
   static char str[5];
@@ -39,6 +37,15 @@ static const char PROGMEM img_title[] = {
     0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x08, 0x7f,
     0x49, 0x41, 0x22, 0x1c, 0x00, 0x74, 0x00, 0x38, 0x40, 0x38};
 
+bool has_any_pressing_key(void) {
+  for (int i = 0; i < KEYBALL_OLED_MAX_PRESSING_KEYCODES; i++) {
+    if (keyball.pressing_keys[i] != BL) {
+      return true;
+    }
+  }
+  return false;
+}
+
 // CPI, scroll, key information
 static void print_cpi_status(void) {
   oled_write_raw_P(img_title, sizeof(img_title));
@@ -50,10 +57,12 @@ static void print_cpi_status(void) {
   oled_set_cursor(4, 2);
   oled_write_char('0' + keyball_get_scroll_div(), false);
 
-  oled_set_cursor(0, 4);
-  oled_write_P(PSTR(" K"), false);
-  oled_write_char(to_1x(keyball.last_kc >> 4), false);
-  oled_write_char(to_1x(keyball.last_kc), false);
+  if (has_any_pressing_key()) {
+    oled_set_cursor(0, 4);
+    oled_write_P(PSTR(" K"), false);
+    oled_write_char(to_1x(keyball.last_kc >> 4), false);
+    oled_write_char(to_1x(keyball.last_kc), false);
+  }
 }
 
 // Lock key status
@@ -240,7 +249,9 @@ static const char PROGMEM img_logo[] = {
 static void render_version(void) {
   oled_write_raw_P(img_logo, sizeof(img_logo));
   oled_set_cursor(0, 6);
-  oled_write_P(PSTR("VER.\nTY007\n\nQMK.\n"), false);
+  oled_write_P(PSTR("VER.\n"), false);
+  oled_write_ln_P(PSTR(TOUYOU_VERSION_STRING), false);
+  oled_write_P(PSTR("\n\nQMK.\n"), false);
   oled_write_ln_P(PSTR(QMK_VERSION), false);
 }
 
