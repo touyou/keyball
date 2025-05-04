@@ -34,7 +34,7 @@ static const char PROGMEM img_title[] = {
     0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x08, 0x7f,
     0x49, 0x41, 0x22, 0x1c, 0x00, 0x74, 0x00, 0x38, 0x40, 0x38};
 
-// CPI, scroll information
+// CPI, scroll, key information
 static void print_cpi_status(void) {
   oled_write_raw_P(img_title, sizeof(img_title));
   oled_set_cursor(0, 2);
@@ -44,6 +44,9 @@ static void print_cpi_status(void) {
 
   oled_set_cursor(4, 2);
   oled_write_char('0' + keyball_get_scroll_div(), false);
+
+  oled_set_cursor(0, 4);
+  oled_write(keyball.pressing_keys, false);
 }
 
 // Lock key status
@@ -230,7 +233,7 @@ static const char PROGMEM img_logo[] = {
 static void render_version(void) {
   oled_write_raw_P(img_logo, sizeof(img_logo));
   oled_set_cursor(0, 6);
-  oled_write_P(PSTR("VER.\nTY005\n\nQMK.\n"), false);
+  oled_write_P(PSTR("VER.\nTY006\n\nQMK.\n"), false);
   oled_write_ln_P(PSTR(QMK_VERSION), false);
 }
 
