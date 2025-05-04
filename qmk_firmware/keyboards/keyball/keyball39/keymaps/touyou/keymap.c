@@ -119,3 +119,11 @@ bool oled_task_user(void) {
 }
 
 #endif
+
+// Call when a key is pressed or released
+bool process_record_user(uint16_t keycode, keyrecord_t *record) {
+#ifdef OLED_ENABLE
+  set_pressing_keys_for_oled(record->event.pressed);
+#endif
+  return true;
+}
