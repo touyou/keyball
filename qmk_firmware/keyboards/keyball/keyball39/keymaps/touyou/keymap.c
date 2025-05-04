@@ -28,28 +28,28 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     KC_Q, KC_W, KC_E, KC_R, KC_T,     KC_Y, KC_U, KC_I, KC_O, KC_P,
     CTL_T(KC_A), KC_S, KC_D, KC_F, KC_G,    KC_H, KC_J, KC_K, KC_L, RSFT_T(KC_ENT),
     SFT_T(KC_Z), KC_X, KC_C, KC_V, KC_B,    KC_N, KC_M, KC_COMM, KC_DOT, KC_SLSH,
-    KC_LCTL, KC_LSFT, KC_LALT, LGUI_T(KC_LNG2), LT(1,KC_SPC), LT(4,KC_TAB),    LT(1,KC_BSPC), RGUI_T(KC_LNG1), XXXXXXX, XXXXXXX, XXXXXXX, LT(3,KC_ESC)
+    KC_LCTL, KC_LSFT, LT(4,KC_LALT), LGUI_T(KC_LNG2), LT(1,KC_SPC), LT(3,KC_TAB),    LT(1,KC_BSPC), RGUI_T(KC_LNG1), XXXXXXX, XXXXXXX, XXXXXXX, LT(3,KC_ESC)
   ),
   // Layer 1: Symbol layer
   [1] = LAYOUT_universal(
     S(KC_1), S(KC_2), S(KC_3), S(KC_4), S(KC_5),    S(KC_6), S(KC_7), S(KC_8), S(KC_9), S(KC_0),
     KC_MINS, S(KC_MINS), KC_LBRC, KC_RBRC, S(KC_QUOT),    S(KC_SCLN), _______, KC_BTN1, KC_BTN2, _______,
     KC_EQL,S(KC_EQL),S(KC_LBRC), S(KC_RBRC), KC_QUOT,    KC_SCLN, KC_GRV, KC_BSLS, _______, _______,
-    KC_LSFT, _______, _______, _______, _______, MO(4),    _______, MO(4), XXXXXXX, XXXXXXX, XXXXXXX, _______
+    KC_LSFT, _______, MO(4), _______, _______, _______,    _______, MO(4), XXXXXXX, XXXXXXX, XXXXXXX, _______
   ),
   // Layer 2: Mouse layer
   [2] = LAYOUT_universal(
     KC_PPLS, KC_P7, KC_P8, KC_P9, KC_PAST,    C(KC_UP), SGUI(KC_4), _______, SGUI(KC_5), C(KC_DOWN),
     KC_PMNS, KC_P4, KC_P5, KC_P6, KC_PSLS,    G(KC_LBRC), G(KC_RBRC), KC_BTN1, KC_BTN2, _______,
     KC_P0, KC_P1, KC_P2, KC_P3, KC_PEQL,    KC_LEFT, KC_UP, KC_DOWN, KC_RGHT, _______,
-    KC_PDOT, _______, _______, _______, _______, MO(4),    _______, _______, XXXXXXX, XXXXXXX, XXXXXXX, _______
+    KC_PDOT, _______, MO(4), _______, _______, _______,    _______, _______, XXXXXXX, XXXXXXX, XXXXXXX, _______
   ),
   // Layer 3: Number layer
   [3] = LAYOUT_universal(
     KC_PPLS, KC_P7, KC_P8, KC_P9, KC_PAST,    C(KC_UP), SGUI(KC_4), _______, SGUI(KC_5), C(KC_DOWN),
     KC_PMNS, KC_P4, KC_P5, KC_P6, KC_PSLS,    G(KC_LBRC), G(KC_RBRC), KC_BTN1, KC_BTN2, _______,
     KC_P0, KC_P1, KC_P2, KC_P3, KC_PEQL,    KC_LEFT, KC_UP, KC_DOWN, KC_RGHT, _______,
-    KC_PDOT, _______, _______, _______, _______, MO(4),    _______, _______, XXXXXXX, XXXXXXX, XXXXXXX, _______
+    KC_PDOT, _______, MO(4), _______, _______, _______,    _______, _______, XXXXXXX, XXXXXXX, XXXXXXX, _______
   ),
   // Layer 4: Function & Scroll layerk
   [4] = LAYOUT_universal(
