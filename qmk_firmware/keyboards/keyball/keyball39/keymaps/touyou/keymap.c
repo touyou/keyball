@@ -90,7 +90,7 @@ layer_state_t layer_state_set_user(layer_state_t state) {
 #ifdef OLED_ENABLE
 
 #include "custom_oled.c"
-#include "lib/oledkit/oledkit.h" k
+#include "lib/oledkit/oledkit.h"
 
 // change OLED rotation
 oled_rotation_t oled_init_user(oled_rotation_t rotation) {
