@@ -142,22 +142,22 @@ static void print_layer_status(void) {
   case 1:
     oled_write_raw_P(img_layer_1, sizeof(img_layer_1));
     oled_set_cursor(0, 13);
-    oled_write_P(PSTR(" AML"), false);
+    oled_write_P(PSTR(" SYB"), false);
     break;
   case 2:
     oled_write_raw_P(img_layer_2, sizeof(img_layer_2));
     oled_set_cursor(0, 13);
-    oled_write_P(PSTR(" SIG"), false);
+    oled_write_P(PSTR(" AML"), false);
     break;
   case 3:
     oled_write_raw_P(img_layer_3, sizeof(img_layer_3));
     oled_set_cursor(0, 13);
-    oled_write_P(PSTR(" SCR"), false);
+    oled_write_P(PSTR(" NUM"), false);
     break;
   case 4:
     oled_write_raw_P(img_layer_4, sizeof(img_layer_4));
     oled_set_cursor(0, 13);
-    oled_write_P(PSTR(" NUM"), false);
+    oled_write_P(PSTR(" SCR"), false);
     break;
   case 5:
     oled_write_raw_P(img_layer_5, sizeof(img_layer_5));
