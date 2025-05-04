@@ -39,9 +39,6 @@ jobs:
           - keyboard: keyball46
             keymap: via_Both
 
-          - keyboard: keyball39
-            keymap: touyou_via
-
     uses: ./.github/workflows/build-firmware.yml
     with:
       qmk_version: "0.22.14"
