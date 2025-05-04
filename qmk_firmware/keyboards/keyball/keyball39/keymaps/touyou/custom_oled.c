@@ -230,7 +230,7 @@ static const char PROGMEM img_logo[] = {
 static void render_version(void) {
   oled_write_raw_P(img_logo, sizeof(img_logo));
   oled_set_cursor(0, 6);
-  oled_write_P(PSTR("VER.\nTY004n\nQMK.\n"), false);
+  oled_write_P(PSTR("VER.\nTY005n\nQMK.\n"), false);
   oled_write_ln_P(PSTR(QMK_VERSION), false);
 }
 
