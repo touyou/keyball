@@ -142,7 +142,7 @@ static void print_layer_status(void) {
   case 1:
     oled_write_raw_P(img_layer_1, sizeof(img_layer_1));
     oled_set_cursor(0, 13);
-    0 oled_write_P(PSTR(" AML"), false);
+    oled_write_P(PSTR(" AML"), false);
     break;
   case 2:
     oled_write_raw_P(img_layer_2, sizeof(img_layer_2));
