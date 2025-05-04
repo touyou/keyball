@@ -37,15 +37,6 @@ static const char PROGMEM img_title[] = {
     0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x08, 0x7f,
     0x49, 0x41, 0x22, 0x1c, 0x00, 0x74, 0x00, 0x38, 0x40, 0x38};
 
-bool has_any_pressing_key(void) {
-  for (int i = 0; i < KEYBALL_OLED_MAX_PRESSING_KEYCODES; i++) {
-    if (keyball.pressing_keys[i] != '\xB0') {
-      return true;
-    }
-  }
-  return false;
-}
-
 // CPI, scroll, key information
 static void print_cpi_status(void) {
   oled_write_raw_P(img_title, sizeof(img_title));
@@ -57,12 +48,10 @@ static void print_cpi_status(void) {
   oled_set_cursor(4, 2);
   oled_write_char('0' + keyball_get_scroll_div(), false);
 
-  if (has_any_pressing_key()) {
-    oled_set_cursor(0, 4);
-    oled_write_P(PSTR(" K"), false);
-    oled_write_char(to_1x(keyball.last_kc >> 4), false);
-    oled_write_char(to_1x(keyball.last_kc), false);
-  }
+  oled_set_cursor(0, 4);
+  oled_write_P(PSTR(" K"), false);
+  oled_write_char(to_1x(keyball.last_kc >> 4), false);
+  oled_write_char(to_1x(keyball.last_kc), false);
 }
 
 // Lock key status
