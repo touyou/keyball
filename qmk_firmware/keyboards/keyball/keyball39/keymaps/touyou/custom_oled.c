@@ -39,7 +39,7 @@ static const char PROGMEM img_title[] = {
 
 bool has_any_pressing_key(void) {
   for (int i = 0; i < KEYBALL_OLED_MAX_PRESSING_KEYCODES; i++) {
-    if (keyball.pressing_keys[i] != BL) {
+    if (keyball.pressing_keys[i] != '\xB0') {
       return true;
     }
   }
