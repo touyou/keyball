@@ -47,14 +47,14 @@ static void print_cpi_status(void) {
 }
 
 // Lock key status
-static void print_lock_key_status(void) {
-  oled_set_cursor(0, 5);
+// static void print_lock_key_status(void) {
+//   oled_set_cursor(0, 5);
 
-  const led_t led_state = host_keyboard_led_state();
-  oled_write_P(led_state.caps_lock ? PSTR("C ") : PSTR("- "), false);
-  oled_write_P(led_state.num_lock ? PSTR("N ") : PSTR("- "), false);
-  oled_write_P(led_state.scroll_lock ? PSTR("S") : PSTR("-"), false);
-}
+//   const led_t led_state = host_keyboard_led_state();
+//   oled_write_P(led_state.caps_lock ? PSTR("C ") : PSTR("- "), false);
+//   oled_write_P(led_state.num_lock ? PSTR("N ") : PSTR("- "), false);
+//   oled_write_P(led_state.scroll_lock ? PSTR("S") : PSTR("-"), false);
+// }
 
 // 'cat0', 32x32px
 static const char PROGMEM img_layer_0[] = {
