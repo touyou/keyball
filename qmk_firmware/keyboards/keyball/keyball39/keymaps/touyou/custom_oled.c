@@ -28,6 +28,11 @@ static const char *itoc(uint8_t number, uint8_t width) {
   return str;
 }
 
+static char to_1x(uint8_t x) {
+  x &= 0x0f;
+  return x < 10 ? x + '0' : x + 'a' - 10;
+}
+
 // CPI, DIV title
 static const char PROGMEM img_title[] = {
     0x3e, 0x63, 0x41, 0x41, 0x22, 0x00, 0x7c, 0x14, 0x08, 0x00, 0x74,
@@ -46,7 +51,9 @@ static void print_cpi_status(void) {
   oled_write_char('0' + keyball_get_scroll_div(), false);
 
   oled_set_cursor(0, 4);
-  oled_write(keyball.pressing_keys, false);
+  oled_write_P(PSTR(" K"), false);
+  oled_write_char(to_1x(keyball.last_kc >> 4), false);
+  oled_write_char(to_1x(keyball.last_kc), false);
 }
 
 // Lock key status
@@ -233,7 +240,7 @@ static const char PROGMEM img_logo[] = {
 static void render_version(void) {
   oled_write_raw_P(img_logo, sizeof(img_logo));
   oled_set_cursor(0, 6);
-  oled_write_P(PSTR("VER.\nTY006\n\nQMK.\n"), false);
+  oled_write_P(PSTR("VER.\nTY007\n\nQMK.\n"), false);
   oled_write_ln_P(PSTR(QMK_VERSION), false);
 }
 
