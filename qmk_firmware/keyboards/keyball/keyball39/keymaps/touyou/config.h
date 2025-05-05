@@ -43,7 +43,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #define DYNAMIC_KEYMAP_LAYER_COUNT 6
 
-#define KEYBALL_CPI_DEFAULT 1000
+#define KEYBALL_CPI_DEFAULT 1200
 #define KEYBALL_SCROLL_DIV_DEFAULT 6
 
-#define TOUYOU_VERSION_STRING "TY007"
+#define TOUYOU_VERSION_STRING "TY008"
