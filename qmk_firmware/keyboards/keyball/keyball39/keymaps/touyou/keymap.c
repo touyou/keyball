@@ -40,15 +40,15 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   // Layer 2: Mouse layer
   [2] = LAYOUT_universal(
     KC_PPLS, KC_P7, KC_P8, KC_P9, KC_PAST,    C(KC_UP), SGUI(KC_4), _______, SGUI(KC_5), C(KC_DOWN),
-    KC_PMNS, KC_P4, KC_P5, KC_P6, KC_PSLS,    G(KC_LBRC), G(KC_RBRC), KC_BTN1, KC_BTN2, _______,
-    KC_P0, KC_P1, KC_P2, KC_P3, KC_PEQL,    KC_LEFT, KC_UP, KC_DOWN, KC_RGHT, MO(4),
+    ALT_T(KC_PMNS), KC_P4, KC_P5, KC_P6, KC_PSLS,    G(KC_LBRC), G(KC_RBRC), KC_BTN1, KC_BTN2, _______,
+    SFT_T(KC_P0), KC_P1, KC_P2, KC_P3, KC_PEQL,    KC_LEFT, KC_UP, KC_DOWN, KC_RGHT, MO(4),
     KC_PDOT, _______, MO(4), _______, _______, _______,    _______, _______, XXXXXXX, XXXXXXX, XXXXXXX, _______
   ),
   // Layer 3: Number layer
   [3] = LAYOUT_universal(
     KC_PPLS, KC_P7, KC_P8, KC_P9, KC_PAST,    C(KC_UP), SGUI(KC_4), _______, SGUI(KC_5), C(KC_DOWN),
-    KC_PMNS, KC_P4, KC_P5, KC_P6, KC_PSLS,    G(KC_LBRC), G(KC_RBRC), KC_BTN1, KC_BTN2, _______,
-    KC_P0, KC_P1, KC_P2, KC_P3, KC_PEQL,    KC_LEFT, KC_UP, KC_DOWN, KC_RGHT, _______,
+    ALT_T(KC_PMNS), KC_P4, KC_P5, KC_P6, KC_PSLS,    G(KC_LBRC), G(KC_RBRC), KC_BTN1, KC_BTN2, _______,
+    SFT_T(KC_P0), KC_P1, KC_P2, KC_P3, KC_PEQL,    KC_LEFT, KC_UP, KC_DOWN, KC_RGHT, _______,
     KC_PDOT, _______, MO(4), _______, _______, _______,    _______, _______, XXXXXXX, XXXXXXX, XXXXXXX, _______
   ),
   // Layer 4: Function & Scroll layerk
