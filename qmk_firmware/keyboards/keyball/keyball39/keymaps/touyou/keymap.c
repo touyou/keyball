@@ -33,9 +33,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   // Layer 1: Symbol layer
   [1] = LAYOUT_universal(
     S(KC_1), S(KC_2), S(KC_3), S(KC_4), S(KC_5),    S(KC_6), S(KC_7), S(KC_8), S(KC_9), S(KC_0),
-    KC_MINS, S(KC_MINS), KC_LBRC, KC_RBRC, S(KC_QUOT),    S(KC_SCLN), S(KC_GRV), KC_BTN1, KC_BTN2, _______,
-    KC_EQL,S(KC_EQL),S(KC_LBRC), S(KC_RBRC), KC_QUOT,    KC_SCLN, KC_GRV, KC_BSLS, S(KC_BSLS), _______,
-    _______, _______, MO(4), _______, _______, _______,    _______, MO(4), XXXXXXX, XXXXXXX, XXXXXXX, _______
+    S(KC_MINS), S(KC_EQL), S(KC_GRV), S(KC_SCLN), S(KC_QUOT),    S(KC_LBRC), S(KC_RBRC), KC_BTN1, KC_BTN2, S(KC_BSLS),
+    KC_MINS, KC_EQL, KC_GRV, KC_SCLN, KC_QUOT,    KC_LBRC, KC_RBRC, _______, _______, KC_BSLS,
+    _______, _______, MO(4), _______, _______, _______,    _______, _______, XXXXXXX, XXXXXXX, XXXXXXX, _______
   ),
   // Layer 2: Mouse layer
   [2] = LAYOUT_universal(
