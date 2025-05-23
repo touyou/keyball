@@ -46,4 +46,8 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define KEYBALL_CPI_DEFAULT 1200
 #define KEYBALL_SCROLL_DIV_DEFAULT 6
 
-#define TOUYOU_VERSION_STRING "TY011"
+#define MOUSEKEY_WHEEL_INTERVAL    10
+#define MOUSEKEY_WHEEL_MAX_SPEED   1
+#define MOUSEKEY_WHEEL_TIME_TO_MAX 0
+
+#define TOUYOU_VERSION_STRING "TY012"
